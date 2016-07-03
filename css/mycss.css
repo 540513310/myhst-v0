@@ -1,0 +1,90 @@
+.side-features p {
+    border-bottom: 1px solid #E3E3E3;
+    position: relative;
+    margin: 10px 0;
+}
+
+ p {
+    font-size: .813em;
+}
+
+.side-features label {
+    padding-right: 30px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+
+
+.ac-custom svg {
+
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 50%;
+	margin-top: -10px;
+	right: 5px;
+	pointer-events: none;
+}
+
+.ac-custom svg path {
+	stroke: #7EC896;
+	stroke-width: 13px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+
+.ac-custom ul, .ac-custom ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+
+.ac-custom li {
+    margin: 0 auto;
+    padding:0.6em 0 ;
+    position: relative;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+
+.ac-custom input[type="checkbox"]{
+    
+    -webkit-appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 100;
+}
+
+.ac-custom input[type="checkbox"], .ac-custom label::before {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+.ac-custom label {
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+   
+    vertical-align: top;
+    
+    cursor: pointer;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    width: 260px;
+}

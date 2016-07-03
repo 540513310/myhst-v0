@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myhst</title>
+
+	<link rel="stylesheet" type="text/css" href="http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.css">
+	<link rel="stylesheet" type="text/css" href="http://handsontable.com/static/css/main.css">
+	<link rel="stylesheet" href="./css/mycss.css">
+	<script src="http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.js">	
+	</script>
+	<script src="./js/getsvg.js"></script>
+	<script>
+		 var svgGetter = new SvgGetter();
+	</script>
+	
+</head>
+<body>
+	<div class="row">
+		<div class="large-12 large-centered columns">
+			<h2 class="headline">
+			Choose your <strong>components</strong><br>
+			<small>Discover our most popular basic and Pro features</small>
+			</h2>
+			<div class="row" >
+			<!-- style="background-color: red;" -->
+				<div class="small-12 medium-3 columns side-features">
+					<h5>Popular basic features</h5>
+					<form class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
+					
+					<ul>
+						<li ><input id="cb6" name="cb6" type="checkbox"><label style="width:260px" for="cb6">Header</label ></li>
+						<li><input id="cb7" name="cb7" type="checkbox"><label for="cb7">Fixed rows/columns</label></li>
+						<li><input id="cb8" name="cb8" type="checkbox"><label for="cb8">Sorting</label></li>
+						<li><input id="cb9" name="cb9" type="checkbox"><label for="cb9">Mergecell</label></li>
+						<li><input id="cb10" name="cb6" type="checkbox"><label for="cb10">Row/Colimn Resize</label></li>
+						<li><input id="cb11" name="cb7" type="checkbox"><label for="cb11">Row/Colimn Move</label></li>
+						<li><input id="cb12" name="cb8" type="checkbox"><label for="cb12">Condition Formatting</label></li>
+						<li><input id="cb13" name="cb9" type="checkbox"><label for="cb13">Context Menu</label></li>
+					<ul>
+				</form>
+				</div>
+				<div class="small-12 medium-9 columns">
+					<div class="plugin-preview">
+						<div id="hot"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- <svg >
+			<defs>
+				<rect id="input-check"
+				x="10"
+				y="10"
+				rx="3"
+				ry="3"
+				width="20"
+				height="20"
+				stroke="red"
+				fill="none">
+				
+			</rect>
+			</defs>
+	
+		</svg> -->
+
+	</div>
+	<script src="./js/myhst.js"></script>
+	<script src="./js/check.js"></script>
+	<script src="http://www.yyyweb.com/demo/common/jquery.min.js"></script>
+	
+</body>
+</html>
