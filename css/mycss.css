@@ -26,11 +26,12 @@
 	margin-top: -10px;
 	right: 5px;
 	pointer-events: none;
+	border: 2px solid #ccc;
 }
 
 .ac-custom svg path {
 	stroke: #7EC896;
-	stroke-width: 13px;
+	stroke-width: 18px;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	fill: none;
