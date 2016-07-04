@@ -1,3 +1,4 @@
+
 if( document.createElement('svg').getAttributeNS ) {
 
 	var checkbxsCheckmark = Array.prototype.slice.call( document.querySelectorAll( 'form.ac-checkmark input[type="checkbox"]' ) ),
@@ -24,12 +25,84 @@ if( document.createElement('svg').getAttributeNS ) {
 	}
 
 	function controlCheckbox( el, type, svgDef ) {
+
+		// el.addEventListener('load',function(){
+		// 	if (el.checked) {
+		// 		draw( el, type );
+		// 	}
+		// });
+
 		var svg = createSVGEl( svgDef );
 		el.parentNode.appendChild( svg );
+
 		
 		el.addEventListener( 'change', function() {
 			if( el.checked ) {
+				
 				draw( el, type );
+
+				// swith(el.id){
+				// 	case 'cb6' :
+				// 				hot.updateSettings({
+				// 				rowHeaders: true,
+				// 			});break;
+				// 	case 'cb7' :hot.updateSettings({
+				// 				fixedRowsTop: 2,
+			 //    				fixedColumnsLeft: 3		
+				// 	});
+				// 	case 'cb8' :
+				// 				hot.updateSettings({
+				// 				columnSorting: true,
+				// 			    sortIndicator: true,
+				// 			    autoColumnSize: {
+				// 			        samplingRatio: 23
+				// 			    }
+				// 			});break;
+				// 	default:break;
+				// }
+
+				if(el.id=='cb6'){
+					// hot.updateSettings({
+					// 	rowHeaders: true,
+					// 	colHeaders: [
+
+							
+					//         'ID',
+					//         'Country',
+					//         'Code',
+					//         'Currency',
+					//         'Level',
+					//         'Units',
+					//         'Date',
+					//         'Change'
+					//     ],
+					// });
+				}
+				else{
+
+				}
+				if (el.id=='cb7') {
+					hot.updateSettings({
+							fixedRowsTop: 2,
+			   				fixedColumnsLeft: 3
+			   				});
+				} 
+				else {
+
+				}
+
+				if (el.id=='cb8') {
+										hot.updateSettings({
+										columnSorting: true,
+									    sortIndicator: true,
+									    autoColumnSize: {
+								        	samplingRatio: 23
+									    }
+										});
+								alert(hot);
+							} 
+							else {}
+
 			}
 			else {
 				reset( el );
@@ -46,7 +119,11 @@ if( document.createElement('svg').getAttributeNS ) {
 		} );
 	}
 
-	checkbxsCheckmark.forEach( function( el, i ) { controlCheckbox( el, 'checkmark' ); } );
+	checkbxsCheckmark.forEach( function( el, i ) {
+
+	 controlCheckbox( el, 'checkmark' ); } );
+
+
 	
 	function draw( el, type ) {
 		var paths = [], pathDef, 
