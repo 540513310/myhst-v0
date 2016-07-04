@@ -41,71 +41,123 @@ if( document.createElement('svg').getAttributeNS ) {
 				
 				draw( el, type );
 
-				// swith(el.id){
-				// 	case 'cb6' :
-				// 				hot.updateSettings({
-				// 				rowHeaders: true,
-				// 			});break;
-				// 	case 'cb7' :hot.updateSettings({
-				// 				fixedRowsTop: 2,
-			 //    				fixedColumnsLeft: 3		
-				// 	});
-				// 	case 'cb8' :
-				// 				hot.updateSettings({
-				// 				columnSorting: true,
-				// 			    sortIndicator: true,
-				// 			    autoColumnSize: {
-				// 			        samplingRatio: 23
-				// 			    }
-				// 			});break;
-				// 	default:break;
-				// }
+				
 
 				if(el.id=='cb6'){
-					// hot.updateSettings({
-					// 	rowHeaders: true,
-					// 	colHeaders: [
-
-							
-					//         'ID',
-					//         'Country',
-					//         'Code',
-					//         'Currency',
-					//         'Level',
-					//         'Units',
-					//         'Date',
-					//         'Change'
-					//     ],
-					// });
-				}
-				else{
-
-				}
-				if (el.id=='cb7') {
 					hot.updateSettings({
+							 rowHeaders: true,
+						     colHeaders: [
+						        'ID',
+						        'Country',
+						        'Code',
+						        'Currency',
+						        'Level',
+						        'Units',
+						        'Date',
+						        'Change'
+						     ],
+		   				});
+					
+
+				}
+				
+				else if (el.id=='cb7') {
+						hot.updateSettings({
 							fixedRowsTop: 2,
 			   				fixedColumnsLeft: 3
-			   				});
+		   				});
 				} 
-				else {
+				
 
+				else if (el.id=='cb8') {
+						hot.updateSettings({
+							columnSorting: true,
+						    sortIndicator: true,
+						    autoColumnSize: {
+					        		samplingRatio: 23
+						    	}
+						});
+				} 
+				else if (el.id=='cb9') {
+						hot.updateSettings({
+							mergeCells: true,
+    						contextMenu: true
+						});
 				}
-
-				if (el.id=='cb8') {
-										hot.updateSettings({
-										columnSorting: true,
-									    sortIndicator: true,
-									    autoColumnSize: {
-								        	samplingRatio: 23
-									    }
-										});
-								alert(hot);
-							} 
-							else {}
-
+				else if(el.id=='cb10'){
+						hot.updateSettings({
+							 manualRowResize: true,
+    						 manualColumnResize: true
+						});
+				}
+				else if(el.id=='cb11'){
+						hot.updateSettings({
+							 manualRowMove: true,
+    						 manualColumnMove: true
+						});
+				}
+				else if(el.id=='cb12'){
+						
+				}
+				else if(el.id=='cb13'){
+						hot.updateSettings({
+							 contextMenu: true
+						});
+				}
+				
 			}
 			else {
 				reset( el );
+				if(el.id=='cb6'){
+						hot.updateSettings({
+							rowHeaders: true,
+							colHeaders: null,
+		   				});
+				}
+				
+				else if (el.id=='cb7') {
+						hot.updateSettings({
+							fixedRowsTop: 0,
+			   				fixedColumnsLeft: 0
+		   				});
+				} 
+				
+
+				else if (el.id=='cb8') {
+						hot.updateSettings({
+							columnSorting: false,
+						    sortIndicator: false,
+						    autoColumnSize: {
+					        		samplingRatio: 23
+						    	}
+						});
+				} 
+				else if (el.id=='cb9') {
+						hot.updateSettings({
+							mergeCells: false,
+    						contextMenu: false
+						});
+				}
+				else if(el.id=='cb10'){
+						hot.updateSettings({
+							 manualRowResize: false,
+    						 manualColumnResize:false
+						});
+				}
+				else if(el.id=='cb11'){
+						hot.updateSettings({
+							 manualRowMove: false,
+    						 manualColumnMove: false
+						});
+				}
+				else if(el.id=='cb12'){
+						
+				}
+				else if(el.id=='cb13'){
+						hot.updateSettings({
+							 contextMenu: false
+						});
+				}
 			}
 		} );
 	}
